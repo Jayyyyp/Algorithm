@@ -15,7 +15,7 @@ public class Num_10952 {
 			int result = n1 + n2;
 			System.out.println(result);
 		}
-
+		scan.close();
 	}
 
 }
