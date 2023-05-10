@@ -21,6 +21,7 @@ public class Num_1427 {
 		Arr[i] = numbers;
 		Arrays.sort(Arr);
 		}
+		
 		br.close();
 	}
 }
