@@ -26,7 +26,8 @@ public class Num_1003_fibonacci {
             dp[i][1] = dp[i-1][1] + dp[i-2][1];
         }
         
-        for(int i = 0; i < T; i++) {
+        for(int i = 0; i < T; i++) { 
+        	// 각 테스트 케이스에 대해 입력받은 피보나치 수 'N'의 0과 1의 호출 횟수 출력
             int N = Integer.parseInt(br.readLine());
             bw.write(dp[N][0] + " " + dp[N][1] + "\n");
         }
