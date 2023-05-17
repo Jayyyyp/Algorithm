@@ -58,7 +58,7 @@ public class Num_10828_Stack {
 		
 		switch(st.nextToken()) { // switch case를 이용해 명령어 실행
 		case "push":
-			push(Integer.parseInt(st.nextToken()));
+			push(Integer.parseInt(st.nextToken())); // push 1 과 같이 띄고 명령어 실행되니까 토큰분리 
 			break;
 		case "pop":
 			bw.write(pop() + "\n");
