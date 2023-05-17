@@ -4,7 +4,7 @@ import java.io.*;
 import java.math.BigInteger;
 import java.util.*;
 public class Num_9711_Fibonacci_BigInteger {
-    static BigInteger[] dp; // 매우 큰 정수를 다루기위한 배열 선언
+    static BigInteger[] fibo; // 매우 큰 정수를 다루기위한 배열 선언
     static BigInteger zero = new BigInteger("0"); // 비교나 연산에 사용하는 변수
 
     public static void main(String[] args) throws IOException {
@@ -24,20 +24,20 @@ public class Num_9711_Fibonacci_BigInteger {
             max = Math.max(max,ps[i]);
         }
         
-        dp = new BigInteger[10001]; 
-        // dp 배열을 10001로 초기화하고, 1<=P<=100000
-        dp[1] = new BigInteger("1");
-        dp[2] = new BigInteger("1");
+        fibo = new BigInteger[10001]; 
+        // fibo 배열을 10001로 초기화하고, 1<=P<=100000
+        fibo[1] = new BigInteger("1");
+        fibo[2] = new BigInteger("1");
         // 피보나치수열의 첫 번째와 두 번째 값을 1로 설정
         
         for (int i = 3; i <= max; i++) { // 그 중 가장 큰값까지 반복하여 
-            dp[i] = dp[i-1].add(dp[i-2]); // 피보나치 수열을 계산해 dp에 저장
+            fibo[i] = fibo[i-1].add(fibo[i-2]); // 피보나치 수열을 계산해 fibo에 저장
         }
         
         StringBuilder sb = new StringBuilder(); // 결과 출력을 위해 생성
         
         for (int i = 1; i <= t; i++) {
-            sb.append("Case #" + i + ": " + dp[ps[i]].remainder(qs[i]) + "\n");
+            sb.append("Case #" + i + ": " + fibo[ps[i]].remainder(qs[i]) + "\n");
         }
         
         System.out.print(sb);
