@@ -17,7 +17,7 @@ public class Num_10845_Queue {
 
     public static void push(int num) { // 큐의 front에 데이터 추가
         queue[back++] = num; // 큐의 back 데이터 위치에 데이터 저장
-        size++; // back 위치와 큐의 크기를 1 증가
+        size++; // 큐의 크기를 1 증가
     }
 
     public static int pop() { // 큐의 front에 있는 데이터를 제거
@@ -35,6 +35,7 @@ public class Num_10845_Queue {
 
     public static int empty() { // 큐가 비어있는지 확인
         return size == 0 ? 1 : 0;
+        // if(size ==0){return 1;}else{return 0}
     }
 
     public static int front() { // 큐의 front에 있는 데이터 반환
@@ -74,7 +75,6 @@ public class Num_10845_Queue {
                     break;
                 case "empty":
                     bw.write(empty() + "\n");
-                   
                     break;
                 case "front":
                     bw.write(front() + "\n");

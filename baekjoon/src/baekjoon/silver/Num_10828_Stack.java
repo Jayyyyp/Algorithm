@@ -20,7 +20,7 @@ public class Num_10828_Stack {
 	}
 	public static int pop() { // top에 있는 데이터 제거
 		if(size == 0) { // 스택이 비어있으면,
-			return -1; // 1 반환
+			return -1; // -1 반환
 		}else { // 스택이 비어있지 않으면,
 			int outNum = stack[size-1]; // top에 있는 데이터 제거 후,
 			stack[size-1] = 0; // 위치의 데이터를 0으로 설정
@@ -45,6 +45,7 @@ public class Num_10828_Stack {
 			return stack[size-1]; // top의 데이터 반환
 		}
 	}
+	
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
