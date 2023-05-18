@@ -1,4 +1,4 @@
-package concept;
+package recoding;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -7,10 +7,9 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.StringTokenizer;
 
-public class Stack_rere {
-	static int[] stack;
-	static int size = 0;
-	
+public class Stack_rerere {
+static int[] stack;
+static int size = 0;
 	public static void push(int X) {
 		stack[size] = X;
 		size++;
@@ -19,7 +18,7 @@ public class Stack_rere {
 		if(size == 0) {
 			return -1;
 		}else {
-			int outNum = stack[size-1];
+			int outNum = stack[size - 1];
 			size--;
 			return outNum;
 		}
@@ -41,8 +40,6 @@ public class Stack_rere {
 			return stack[size-1];
 		}
 	}
-	
-
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));

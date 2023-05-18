@@ -1,4 +1,4 @@
-package concept;
+package recoding;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -7,12 +7,12 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.StringTokenizer;
 
-public class Queue_rerere {
-static int[] queue;
-static int size = 0;
-static int front = 0;
-static int back = 0;
-
+public class Queue_rererere {
+	static int[] queue;
+	static int size = 0;
+	static int front = 0;
+	static int back = 0;
+	
 	public static void push(int X) {
 		queue[back++] = X;
 		size++;
@@ -29,7 +29,7 @@ static int back = 0;
 		return size;
 	}
 	public static int empty() {
-		return size == 0 ? 1 : 0;
+		return size == 0? 1 : 0;
 	}
 	public static int front() {
 		if(size == 0) {
@@ -42,9 +42,10 @@ static int back = 0;
 		if(size == 0) {
 			return -1;
 		}else {
-			return queue[back - 1];
+			return queue[back-1];
 		}
 	}
+
 	public static void main(String[] args) throws IOException {
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

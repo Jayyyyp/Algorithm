@@ -1,2 +1,0 @@
-This is an example of BufferedWriter.
-Another line of text.

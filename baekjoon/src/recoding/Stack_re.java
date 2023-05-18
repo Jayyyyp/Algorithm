@@ -1,4 +1,4 @@
-package concept;
+package recoding;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -7,21 +7,23 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.StringTokenizer;
 
-public class Stack_nextDay {
-static int[] stack;
-static int size = 0;
-	public static void push(int X) {
-		stack[size] = X;
+public class Stack_re {
+	 static int[] stack;
+	 static int size = 0;
+	 
+	public static void push(int n) {
+		stack[size] = n;
 		size++;
-	}
+	} 
 	public static int pop() {
 		if(size == 0) {
 			return -1;
 		}else {
-			int outNum = stack[size-1];
+			int outNum = stack[size - 1];
+			stack[size - 1] = 0;
 			size--;
 			return outNum;
-		}
+		}	
 	}
 	public static int size() {
 		return size;
@@ -37,40 +39,40 @@ static int size = 0;
 		if(size == 0) {
 			return -1;
 		}else {
-			return stack[size-1];
+			return stack[size - 1];
 		}
 	}
+
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		
-		int N = Integer.parseInt(br.readLine());
+		int N = Integer.parseInt(br.readLine()); // 명령 개수
 		stack = new int[N];
+		
 		for(int i = 1; i <= N; i++) {
 			StringTokenizer st = new StringTokenizer(br.readLine());
 			switch(st.nextToken()) {
-			case "push" :
-				push(Integer.parseInt(st.nextToken()));
-				break;
-			case "pop" :
-				bw.write(pop() + "\n");
-				break;
-			case "size" :
-				bw.write(size() + "\n");
-				break;
-			case "empty" :
-				bw.write(empty() + "\n");
-				break;
-			case "top" :
-				bw.write(top() + "\n");
-				break;
+				case "push" :  
+						push(Integer.parseInt(st.nextToken()));
+						break;
+				case "pop" :
+						bw.write(pop() + "\n");
+						break;
+				case "size" :
+						bw.write(size() + "\n");
+						break;
+				case "empty" :
+						bw.write(empty() + "\n");
+						break;
+				case "top" :
+						bw.write(top() + "\n");
+						break;
 			}
 		}
-		
 		br.close();
 		bw.flush();
 		bw.close();
-
 	}
 
 }
