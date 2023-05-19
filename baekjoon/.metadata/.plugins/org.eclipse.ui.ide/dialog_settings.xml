@@ -7,8 +7,9 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
-			<item value="D:\Study\Algorithm\baekjoon"/>
+			<item value="C:\Users\jayP\Desktop\Algorithm"/>
 			<item value="D:\Study\Algorithm"/>
+			<item value="D:\Study\Algorithm\baekjoon"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
 			<item value=""/>
