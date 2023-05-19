@@ -1,4 +1,4 @@
-package baekjoon.silver;
+package recoding;
 
 import java.io.*;
 import java.util.*;
